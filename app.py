@@ -3,6 +3,8 @@ from flask import Flask, render_template
 app = Flask("projeto")
 @app.route("/")
 def ola_mundo():
-    return render_template("alo.html"), 200
+    # criar uma variavel com o meu nome
+    nome="Wallison Carvalho"
+    return render_template("alo.html", n=nome), 200
 
 app.run()
